@@ -99,18 +99,35 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias iwork="/home/rrosmaninho/Downloads/IdleWork/work"
-export PATH=$PATH:/home/rrosmaninho/.gem/ruby/2.6.0/bin
+
+
+#############
+## ALIASES ##
+#############
+
+alias idlew="/home/rrosmaninho/Downloads/IdleWork/work"
 alias todo="todoist --color"
 alias fixquartus='/opt/altera/18.1/quartus/bin/jtagconfig'
+alias ementa="python3 /home/rrosmaninho/Repos/ementas-ua/ementas@ua.py"
+alias config='/usr/bin/git --git-dir=/home/rrosmaninho/.cfg/ --work-tree=/home/rrosmaninho'
+alias c='ccompile'
 
-source ~/.profile
+#############
+##  PATH   ##
+#############
 
+export PATH=$PATH:/home/rrosmaninho/.gem/ruby/2.6.0/bin
+export CLASSPATH=".:/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
+export ANTLR4_PATH="/usr/local/lib"
+alias mem="sudo smem -t -k -c pss -P"
 if [ -d /opt/pic32mx/bin ] ; then
   export PATH=$PATH:/opt/pic32mx/bin
 fi
 
-alias c='ccompile'
+########################
+##  USEFUL FUNCTIONS  ##
+########################
+
 ccompile() {
     cc -Wall "$1" -o "${1%.*}" -lm
     if [ "$?" -ne 0 ] ; then
@@ -120,8 +137,6 @@ ccompile() {
     ./"$@"
     rm "$1"
 }
-
-alias mem="sudo smem -t -k -c pss -P"
 
 detpic() {
 	# r.rosmaninho@ua.pt
@@ -153,14 +168,14 @@ detpic() {
 	fi
 }
 
-export CLASSPATH=".:/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
-export ANTLR4_PATH="/usr/local/lib"
-
 mkcd()  {
   mkdir $1
   cd $1
 }
 
-## Ementa UA Script ##
-alias ementa="python3 /home/rrosmaninho/Repos/ementas-ua/ementas@ua.py"
-alias config='/usr/bin/git --git-dir=/home/rrosmaninho/.cfg/ --work-tree=/home/rrosmaninho'
+############
+##  MISC  ##
+############
+
+source ~/.profile
+
