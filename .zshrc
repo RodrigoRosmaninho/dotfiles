@@ -120,7 +120,7 @@ export PATH=$PATH:/home/rrosmaninho/.gem/ruby/2.6.0/bin
 export CLASSPATH=".:/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
 export ANTLR4_PATH="/usr/local/lib"
 alias mem="sudo smem -t -k -c pss -P"
-alias bwl="bw lock"
+alias bwl="bw lock && echo -n 'nothing here' | xclip -se c"
 if [ -d /opt/pic32mx/bin ] ; then
   export PATH=$PATH:/opt/pic32mx/bin
 fi
@@ -182,11 +182,14 @@ bwu() {
   searchstring="--session "
   export BW_SESSION="${string#*$searchstring}"
   rm file
+  string="nothing here"
   clear
 }
 
 bwg() {
-  bw get "$@" | xclip -se c
+  string=$(bw get "$@")
+  echo -n "${string}" | xclip -se c
+  string="nothing here"
 }
 
 ############
