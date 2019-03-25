@@ -333,13 +333,13 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
-assign [class="Station"] 5
-exec station
+assign [class="Franz"] 5
+exec franz
 
-assign [class="Opera"] 1
+#assign [class="Opera"] 1
 exec opera
 
-assign [class="Visual Studio Code"] 2
+assign [class="Code"] 2
 exec code
 
 assign [class="Spotify"] 6
@@ -354,3 +354,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id jetbrains-toolbox --minimize
 exec --no-startup-id xfce4-power-management
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
+bindsym $mod+F8 exec "xrandr-dmenu && ~/.config/polybar/launch.sh"
+
+bindsym $mod+p move workspace to output right
+bindsym $mod+o move workspace to output left
