@@ -108,9 +108,10 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias idlew="/home/rrosmaninho/Downloads/IdleWork/work"
 alias todo="todoist --color"
 alias fixquartus='/opt/altera/18.1/quartus/bin/jtagconfig'
-alias ementa="python3 /home/rrosmaninho/Repos/ementas-ua/ementas@ua.py"
+alias ementa="python3 /home/rrosmaninho/Repos/meals-ua/meals-ua.py"
 alias config='/usr/bin/git --git-dir=/home/rrosmaninho/.cfg/ --work-tree=/home/rrosmaninho'
 alias c='ccompile'
+alias miect='cd ~/Repos/miect-stuff/'
 
 #############
 ##  PATH   ##
@@ -198,3 +199,7 @@ bwg() {
 
 source ~/.profile
 
+
+export PATH=$PATH:/usr/bin
+
+#source '/usr/lib/azure-cli/az.completion'
