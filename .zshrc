@@ -161,7 +161,7 @@ detpic() {
 	   	 fi
 	done
 	if [ $done = 1 ]; then
-		pterm -p "/dev/$i"
+		pterm ${@:2} -p "/dev/$i"
 		return 0
 	else
 		printf "\nNao foi possivel encontrar a DETPIC :(\n"
