@@ -2,10 +2,10 @@
 
 B='#00000000'  # blank
 C='#ffffff22'  # clear ish
-D='#002793ff'  # default
-T='#0037ceff'  # text
+D='#bfbfb9b9'  # default
+T='#ffffffff'  # text
 W='#880000bb'  # wrong
-V='#002793ff'  # verifying
+V='#bfbfb9b9'  # verifying
 
 i3lock \
 --insidevercolor=$C   \
