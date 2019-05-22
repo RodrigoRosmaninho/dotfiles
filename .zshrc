@@ -117,7 +117,7 @@ alias miect='cd ~/Repos/miect-stuff/'
 #############
 
 export PATH=$PATH:/home/rrosmaninho/.gem/ruby/2.6.0/bin
-export CLASSPATH=".:/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
+export CLASSPATH=".:/usr/local/lib/*:$CLASSPATH"
 export ANTLR4_PATH="/usr/local/lib"
 alias mem="sudo smem -t -k -c pss -P"
 alias bwl="bw lock && echo -n 'nothing here' | xclip -se c"
