@@ -1,0 +1,2 @@
+rofi.terminal: terminator
+rofi.run-command: i3-msg exec "{cmd}"
