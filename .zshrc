@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
   export ZSH="/home/rrosmaninho/.oh-my-zsh"
 
@@ -8,7 +10,8 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -99,6 +102,40 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+###############
+## ZSH THEME ##
+###############
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+#DISABLE_AUTO_TITLE="true"
+
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
+
+#POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_STATUS_HIDE_SIGNAME=true
+POWERLEVEL9K_STATUS_OK=false
+
+POWERLEVEL9K_BATTERY_VERBOSE=false
+
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs virtualenv rbenv rvm time battery)
+#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_USER_ICON="\uF415" # 
+POWERLEVEL9K_ROOT_ICON="\uF09C"
+POWERLEVEL9K_SUDO_ICON=$'\uF09C' # 
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+#POWERLEVEL9K_VCS_GIT_ICON='\uF408 '
+#POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uF408 '
+POWERLEVEL9K_USER_DEFAULT_FOREGROUND='white'
+#POWERLEVEL9K_USER_DEFAULT_BACKGROUND='black'
+POWERLEVEL9K_OS_ICON_BACKGROUND='black'
+POWERLEVEL9K_OS_ICON_FOREGROUND='white'
 
 
 #############
@@ -111,6 +148,10 @@ alias fixquartus='/opt/altera/18.1/quartus/bin/jtagconfig'
 alias config='/usr/bin/git --git-dir=/home/rrosmaninho/.cfg/ --work-tree=/home/rrosmaninho'
 alias c='ccompile'
 alias miect='cd ~/Repos/miect-stuff/'
+alias ls='colorls -1 --gs'
+alias ll='ls -l'
+alias tree='ls --tree'
+alias su="sudo -E -s"
 
 #############
 ##  PATH   ##
