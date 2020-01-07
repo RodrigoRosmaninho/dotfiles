@@ -152,6 +152,9 @@ alias ls='colorls -1 --gs'
 alias ll='ls -l'
 alias tree='ls --tree'
 alias su="sudo -E -s"
+alias bomberman="~/iia-bomberman-run.sh"
+
+export DISKS="$HOME/Repos/miect-stuff/SO/sofs/disks"
 
 #############
 ##  PATH   ##
@@ -164,6 +167,9 @@ alias mem="sudo smem -t -k -c pss -P"
 alias bwl="bw lock && echo -n 'nothing here' | xclip -se c"
 if [ -d /opt/pic32mx/bin ] ; then
   export PATH=$PATH:/opt/pic32mx/bin
+fi
+if [ -d /opt/sofs19.bin ] ; then
+  export PATH=$PATH:/opt/sofs19.bin
 fi
 
 ########################
@@ -243,3 +249,6 @@ source ~/.profile
 export PATH=$PATH:/usr/bin
 
 #source '/usr/lib/azure-cli/az.completion'
+
+## Ementa UA Script ##
+alias ementa="python3 /home/rrosmaninho/Repos/ementas-ua/ementas@ua.py"

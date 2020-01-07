@@ -109,7 +109,6 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 modules-left = i3 xwindow
 modules-center = 
 modules-right = arrow1 wireless-network arrow2 memory2 arrow3 cpu2 arrow4 temperature1 arrow5 pavolume arrow6 backlight arrow7 arch-aur-updates arrow8 date battery
-
 separator = 
 
 ;dim-value = 1.0
@@ -482,7 +481,7 @@ format-background = ${colors.background}
 type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
-interval = 1
+interval = 10
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 ;   
@@ -537,7 +536,7 @@ ramp-coreload-7-foreground = #ff5555
 type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
-interval = 1
+interval = 10
 format-foreground = #1D2330
 format-background = #92969D
 format-prefix = ""
@@ -977,7 +976,7 @@ ramp-foreground =${colors.foreground}
 [module/temperature2]
 type = custom/script
 exec = ~/.config/polybar/scripts/tempcores.sh
-interval = 2
+interval = 10
 format-padding = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}

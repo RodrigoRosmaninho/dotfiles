@@ -58,7 +58,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -combi-modi window#drun#ssh -theme solarized -show combi -show-icons -config /home/rrosmaninho/.config/rofi/config
+bindsym $mod+d exec rofi -combi-modi window#drun#ssh -theme /home/rrosmaninho/.config/rofi/regolith-theme.rasi -show combi -show-icons -config /home/rrosmaninho/.config/rofi/config
 #bindsym $mod+d exec cerebro
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -337,13 +337,11 @@ mode "$mode_gaps_left" {
 }
 
 assign [class="Franz"] 5
+assign [class="thunderbird"] 5
+exec thunderbird
 exec franz
 
 #assign [class="Opera"] 1
-exec opera
-
-assign [class="Code"] 2
-exec code
 
 #exec cerebro
 
@@ -360,8 +358,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id jetbrains-toolbox --minimize
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+exec --no-startup-id blueman-manager
 
 bindsym $mod+F8 exec "xrandr-dmenu && ~/.config/polybar/launch.sh"
+bindsym $mod+F6 exec "xrandr --output DP-1 --primary --mode 1920x1080 --rate 75 --left-of eDP-1 && ~/.config/polybar/launch.sh"
 
 bindsym $mod+p move workspace to output right
 bindsym $mod+o move workspace to output left
@@ -374,3 +374,7 @@ bindsym $mod+KP_Add scratchpad show
 
 # Toggle floating window
 bindsym $mod+KP_Multiply floating toggle
+
+bindsym $mod+c exec gnome-screenshot -i
+
+#border_radius 1
